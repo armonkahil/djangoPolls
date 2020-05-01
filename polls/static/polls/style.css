@@ -1,0 +1,8 @@
+.container {
+  background: dodgerblue url('https://media.giphy.com/media/C4YFuLE3mqvo4/giphy.gif') no-repeat;
+  background-size: contain;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li a {
+  color: green;
+}

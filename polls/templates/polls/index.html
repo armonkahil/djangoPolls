@@ -1,0 +1,35 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8 align-self-center py-5">
+            <div class="card mb-3" >
+                            <h3 class="card-header text-center">The G.O.A.T. Polls</h3>
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class = 'card-img img-fluid'src='https://media.giphy.com/media/C4YFuLE3mqvo4/giphy.gif' alt"gif">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body text-center">
+                            {% if latest_question_list %}
+                                <div class="list-group">
+                                    {% for question in latest_question_list %}
+                                    <li class="list-group-item-action"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <p class="card-title">No polls are available.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
