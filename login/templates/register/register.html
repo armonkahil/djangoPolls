@@ -1,8 +1,7 @@
-{% extends 'main/base.html' %}
-
-{% block title %}Create an Account{% endblock %}
-{% block content %}
-  <form class="form-group" method="POST">
-  {{form}} 
-  <button class="btn btn-primary" type="submit">Register</button> 
+{% extends 'main/base.html' %} {% block title %}Create an Account{% endblock %} {% block content %}
+<form class="form-group" method="POST">
+  {% csrf_token %}
+  {{form}}
+  <button class="btn btn-primary" type="submit">Register</button>
+</form>
 {% endblock %}

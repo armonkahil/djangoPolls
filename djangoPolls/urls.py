@@ -23,6 +23,5 @@ urlpatterns = [
     path('register/', v.register, name="register"),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    # path('', include('main.urls')),
-    path('', m.home, name="home")
+    path('', include('main.urls'))
 ]
