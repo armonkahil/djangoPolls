@@ -6,6 +6,7 @@ from django.views import generic
 from django.utils import timezone
 
 from .models import Choice, Question
+from .forms import CreateNewPoll
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
@@ -55,3 +56,7 @@ def vote(request, question_id):
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/detail.html', {'question': question})
+
+def create(response):
+    form = CreateNewPoll()
+    return render(response, "polls/create.html", {"form": form})

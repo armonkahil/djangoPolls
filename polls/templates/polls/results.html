@@ -1,10 +1,6 @@
-{% load bootstrap4 %} {% bootstrap_css %} {% bootstrap_javascript jquery='full' %}
-{% load static %}
+{% extends 'polls/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/animate.min.css' %}" />
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8 align-self-center py-5 animated fadeIn">
+{% block content %}
       <div class="card mb-3">
         <h3 class="card-header text-center">{{ question.question_text }}</h3>
         <div class="row no-gutters">
@@ -29,6 +25,4 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+{% endblock %}

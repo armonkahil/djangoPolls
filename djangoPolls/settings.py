@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'login.apps.LoginConfig',
     'polls.apps.PollsConfig',
+    'main.apps.MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -1,12 +1,8 @@
+{% extends 'polls/base.html' %}
 
-{% load bootstrap4 %} {% bootstrap_css %} {% bootstrap_javascript jquery='full' %} 
+{% block content %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'polls/animate.min.css' %}" />
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-8 align-self-center py-5">
-      <div class="card mb-3 animated fadeIn">
-        <h3 class="card-header text-center">The G.O.A.T. Polls</h3>
+
         <div class="row no-gutters card-columns">
           <div class="col">
             <div class="card-body text-center">
@@ -35,7 +31,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+{% endblock %}

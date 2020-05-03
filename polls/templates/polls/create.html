@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block title%}Create New Poll {% endblock %}
+
+{% block content %}
+Create Poll
+<form class="form-group" method="post" action = "/create/">
+{{form}}
+<button class='btn btn-primary' type="submit", name="save">Create New</button>
+</form>
+{% endblock %}
