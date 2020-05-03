@@ -18,10 +18,12 @@ from django.urls import include, path
 from login import views as v
 from main import views as m
 from polls import views as p
+
 urlpatterns = [
     path('login/', include('login.urls')),
     path('register/', v.register, name="register"),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
+    path('home/', include('main.urls')),
+    path('', include('main.urls')),
 ]
